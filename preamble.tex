@@ -1,0 +1,52 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb,amsthm} % математические пакеты
+\usepackage{geometry}               % для установки полей
+\geometry{a4paper, margin=2cm}      % поля по 2 см, формат А4
+\usepackage{graphicx}               % для вставки картинок
+\usepackage[hidelinks]{hyperref}    % для гиперссылок и кликабельного оглавления
+\usepackage{indentfirst}            % первый абзац в разделе с красной строки
+\usepackage{float}                  % положение картинок
+\usepackage{booktabs}               % таблица
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{quiver}
+
+
+% Inkscape
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{
+    \def\svgwidth{\columnwidth}
+    \import{./Figures/}{#1.pdf_tex}
+}
+
+
+% Увеличение зазора между строками матрицы
+\renewcommand{\arraystretch}{1.2}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[section] 
+% "theorem" – имя окружения
+% "Теорема" – заголовок по умолчанию
+% [section] означает, что нумерация будет идти по секциям (например, "Теорема 1.2").
+
+\newtheorem{lemma}[theorem]{Лемма}
+% Лемма будет нумероваться вместе с теоремами, но иметь свой собственный заголовок
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Определение}
+% "definition" – имя окружения
+% "Определение" – заголовок
+% Нумерация идёт подряд с теоремами
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Замечание}
+
+% Дополнительные настройки пакетов, стили заголовков и т. д.
+% \newtheorem{theorem}{Теорема}[section]
+% \newcommand{\R}{\mathbb{R}} % Пример своего макроса для мн-ва действительных чисел

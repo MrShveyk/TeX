@@ -1,0 +1,28 @@
+\documentclass[a4paper,12pt]{article}
+
+% Подключаем общую преамбулу
+\input{preamble.tex}
+
+\begin{document}
+
+% Титульный лист
+\begin{titlepage}
+    \centering
+    \vspace*{5cm}
+    {\LARGE Лекции по какой-то фигне\par}
+    \vspace{2cm}
+    {\large Автор: \par}
+    \vfill
+    {\large \today}
+\end{titlepage}
+
+% Оглавление
+\tableofcontents
+\clearpage
+
+% Подключаем лекции
+\input{lectures/lecture01}
+\input{lectures/lecture02}
+% И так далее все лекции..
+
+\end{document}
